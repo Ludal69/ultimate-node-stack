@@ -1,0 +1,28 @@
+{
+  "name": "ultimate-node-stack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf dist && swc ./src -d dist",
+    "start": "node dist/src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "volta": {
+    "node": "18.20.3"
+  },
+  "devDependencies": {
+    "@swc/cli": "^0.3.12",
+    "@swc/core": "^1.6.3",
+    "@tsconfig/node18": "^18.2.4",
+    "@types/node": "^20.14.6",
+    "rimraf": "^5.0.7",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "is-empty": "^1.2.0",
+    "validator": "^13.12.0"
+  }
+}
