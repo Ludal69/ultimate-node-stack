@@ -1,0 +1,13 @@
+services:
+  backend:
+    build: .
+    ports:
+      - 5000:5000
+      - 9229:9229
+    volumes:
+      - .:/usr/src/app #même chemin que WORKDIR dans le Dockerfile
+      - /usr/src/app/.pnpm-store
+      - /usr/src/app/node_modules
+    command: pnpm start:docker #override CMD dans le dockerfile car docker-compose n'est utilisé qu'en env de dev ?
+    environment:
+      - PORT=5000
